@@ -12,9 +12,11 @@ namespace Art
         public int maxIterations = 12;
         public GameObject[] objects;
         public GameObject parentObj;
+        public bool randomColor = true;
 
         public override void MakeArt()
         {
+            float colorHue = Random.Range(0f, 1f);
             int amt = Random.Range(min, max);
             int iterations = Random.Range(minIterations, maxIterations);
             for (int i = 0; i < amt; i++)
@@ -27,6 +29,19 @@ namespace Art
                 float rz = Random.Range(0f, 360f);
                 float s = Random.Range(0.25f, 1f);
                 Color shapeColor = Random.ColorHSV();
+
+                if (randomColor == true)
+                {
+                    shapeColor = Random.ColorHSV();
+                }
+                else
+                {
+                    float rValue = Random.Range(0, 0.5f);
+                    float gValue = Random.Range(0, 0.5f);
+                    float bValue = Random.Range(0.5f, 1);
+                    shapeColor = new Color(rValue, gValue, bValue);
+                }
+
                 int objectRange = Random.Range(0, objects.Length);
 
                 for (int j = 1; j < iterations + 1; j++)
