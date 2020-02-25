@@ -236,10 +236,11 @@ MonoBehaviour:
   objects:
   - {fileID: 5409963037433850588, guid: a7cd3c7abdf7a47a391e1a1c59d32646, type: 3}
   - {fileID: 6545035798318875973, guid: d58821fa4c0a947ee9e88502c7741994, type: 3}
+  - {fileID: 2911537055727079874, guid: 5d27a44846c36914c8e95a772a289d01, type: 3}
   lineObj: {fileID: 4125285642742535582, guid: 75f5513888a1f4351a3612b5a4a2524b, type: 3}
   maxLines: 49
   colorLines: 0
-  equalLineScale: 0
+  equalLineScale: 1
 --- !u!4 &1399666364
 Transform:
   m_ObjectHideFlags: 0
